@@ -1,0 +1,179 @@
+/* Variante editorial: a arquitetura e a paleta permanecem as da prévia Café Contempo. */
+.editorial {
+  --shadow: 0 16px 38px color-mix(in srgb, var(--overlay) 12%, transparent);
+  --shadow-strong: 0 22px 60px color-mix(in srgb, var(--overlay) 22%, transparent);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  font-family: Inter, Arial, sans-serif;
+}
+.editorial h1,
+.editorial h2,
+.editorial h3,
+.editorial .hero-meta strong,
+.editorial .brand-name,
+.editorial .about-highlight strong,
+.editorial .rating strong,
+.editorial .footer-main > div:first-child p {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -.035em;
+}
+.editorial .preview-note { background: var(--olive-700); color: var(--white); letter-spacing: .13em; text-transform: uppercase; }
+.editorial .site-header { position: sticky; background: var(--overlay); border-bottom: 1px solid var(--logo-green); }
+.editorial .brand-name { color: var(--white); font-size: 29px; letter-spacing: -.025em; }
+.editorial .brand-mark { width: 31px; height: 31px; background: var(--olive-100); color: var(--logo-green); }
+.editorial .brand-mark svg { width: 22px; height: 22px; }
+.editorial .brand-mark svg path:last-child { fill: var(--olive-100); }
+.editorial .main-nav a { color: var(--white); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; }
+.editorial .main-nav a:hover { color: var(--olive-100); }
+.editorial .menu-toggle { border-color: var(--olive-100); }
+.editorial .menu-toggle span { background: var(--olive-100); }
+.editorial .main-nav.is-open { background: var(--overlay); border-color: var(--logo-green); }
+.editorial .main-nav.is-open a { border-color: var(--logo-green); }
+.editorial .main-nav .mobile-order { color: var(--olive-100); }
+.editorial .button { border-radius: 0; min-height: 52px; background: var(--olive-100); border-color: var(--olive-100); color: var(--overlay); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; box-shadow: none; }
+.editorial .button:hover { background: var(--cream); border-color: var(--cream); color: var(--olive-700); box-shadow: none; }
+.editorial .button-small { min-height: 48px; }
+.editorial .text-link { color: var(--olive-700); border-bottom-color: var(--olive-700); text-transform: uppercase; letter-spacing: .08em; font-size: 11px; }
+.editorial .eyebrow { color: var(--logo-green); letter-spacing: .19em; text-transform: uppercase; }
+.editorial .eyebrow-line { background: currentColor; }
+.editorial .section-pad { padding-block: 92px; }
+
+/* O retrato da cafeteria ocupa toda a abertura, como a fotografia do portfólio jurídico. */
+.editorial .hero { position: relative; display: flex; align-items: center; min-height: 690px; overflow: hidden; background: var(--overlay); padding-block: 78px; }
+.editorial .hero::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, var(--overlay) 0%, color-mix(in srgb, var(--overlay) 92%, transparent) 38%, color-mix(in srgb, var(--overlay) 42%, transparent) 100%); }
+.editorial .hero-grid { position: static; display: block; }
+.editorial .hero-copy { position: relative; z-index: 2; width: min(100%, 880px); }
+.editorial .hero-visual { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; padding: 0; }
+.editorial .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 0; box-shadow: none; }
+.editorial .hero-seal, .editorial .photo-caption { display: none; }
+.editorial .hero .eyebrow { color: var(--olive-100); }
+.editorial .hero h1 { max-width: 880px; color: var(--white); font-size: clamp(64px, 8.5vw, 112px); font-weight: 600; line-height: .94; letter-spacing: -.045em; }
+.editorial .hero h1 em { display: block; color: var(--olive-100); font-weight: 500; }
+.editorial .hero-lead { max-width: 610px; margin-top: 28px; padding-left: 20px; border-left: 2px solid var(--olive-100); color: var(--white); font-size: 16px; line-height: 1.85; }
+.editorial .hero .button-row { margin-top: 32px; }
+.editorial .hero .text-link { color: var(--white); border: 1px solid var(--olive-100); padding: 11px 22px; min-height: 52px; }
+.editorial .hero-meta { max-width: 560px; margin-top: 43px; border-top-color: var(--olive-100); }
+.editorial .hero-meta strong { color: var(--white); font-size: 25px; }
+.editorial .hero-meta small { color: var(--olive-100); }
+
+.editorial .features { background: var(--cream); }
+.editorial .section-intro { margin-bottom: 49px; }
+.editorial .section-intro h2, .editorial .section-heading h2 { font-size: clamp(47px, 6vw, 74px); font-weight: 600; line-height: .98; }
+.editorial .feature-grid { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); gap: 0; }
+.editorial .feature { position: relative; padding: 30px 26px; background: transparent; border: 0; border-bottom: 1px solid var(--line); box-shadow: none; }
+.editorial .feature:last-child { border-bottom: 0; }
+.editorial .feature:hover { transform: none; box-shadow: none; background: var(--warm-white); }
+.editorial .feature::before { content: counter(feature, decimal-leading-zero); counter-increment: feature; display: block; margin-bottom: 14px; color: var(--logo-green); font-size: 11px; font-weight: 800; letter-spacing: .14em; }
+.editorial .feature-grid { counter-reset: feature; }
+.editorial .feature svg { width: 31px; height: 31px; stroke-width: 1.7; }
+.editorial .feature h3 { font-size: 31px; line-height: 1; margin: 20px 0 11px; }
+.editorial .feature p { font-size: 13px; line-height: 1.7; }
+
+.editorial .about { background: var(--warm-white); color: var(--ink); }
+.editorial .about-visual { padding: 17px 17px 0 0; }
+.editorial .about-visual::after { content: ''; position: absolute; inset: 0 0 17px 17px; border: 1px solid var(--olive-500); pointer-events: none; }
+.editorial .about-visual img { border-radius: 0; filter: saturate(.75); }
+.editorial .about-sticker { right: -12px; bottom: 22px; width: 152px; height: auto; min-height: 96px; transform: none; border: 0; border-left: 4px solid var(--olive-100); background: var(--olive-700); color: var(--white); font-size: 25px; }
+.editorial .about .eyebrow { color: var(--logo-green); }
+.editorial .about h2 { color: var(--olive-700); font-size: clamp(49px, 6vw, 76px); font-weight: 600; line-height: .98; }
+.editorial .about h2 em { color: var(--logo-green); }
+.editorial .about-copy > p:not(.eyebrow) { color: var(--coffee); }
+.editorial .about-highlight { border-top-color: var(--line); }
+.editorial .about-highlight strong { color: var(--olive-700); font-size: 30px; }
+.editorial .about-highlight span { color: var(--muted); }
+.editorial .light-link { color: var(--logo-green); border-bottom-color: var(--logo-green); }
+
+.editorial .menu-section { background: var(--overlay); color: var(--white); }
+.editorial .menu-section .eyebrow, .editorial .menu-kicker { color: var(--olive-100); }
+.editorial .menu-section h2 { color: var(--white); }
+.editorial .menu-section .section-heading > p { color: var(--olive-100); }
+.editorial .menu-tab { border-radius: 0; border-color: var(--olive-100); color: var(--white); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.editorial .menu-tab:hover { color: var(--olive-700); }
+.editorial .menu-tab.is-active, .editorial .menu-tab[aria-selected=true] { background: var(--olive-100); border-color: var(--olive-100); color: var(--overlay); }
+.editorial .menu-grid { border-top: 1px solid var(--logo-green); padding-top: 20px; }
+.editorial .menu-card { background: var(--cream); border: 0; box-shadow: none; }
+.editorial .menu-card img { filter: saturate(.8); }
+.editorial .menu-card > div { display: flex; flex-direction: column; align-items: flex-start; }
+.editorial .menu-card .menu-kicker { color: var(--logo-green); }
+.editorial .menu-card h3 { font-size: 34px; line-height: 1; }
+.editorial .price { margin-top: auto; padding-top: 16px; }
+.editorial .menu-disclaimer { color: var(--olive-100); }
+
+.editorial .pause-banner { background: var(--olive-700); }
+.editorial .pause-banner::after { content: 'C'; right: -25px; bottom: -170px; color: var(--olive-100); opacity: .08; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 640px; }
+.editorial .pause-banner h2 { max-width: 920px; font-size: clamp(54px, 7vw, 88px); line-height: .95; font-weight: 600; }
+.editorial .pause-banner .eyebrow { color: var(--olive-100); }
+.editorial .pause-action p { color: var(--white); }
+.editorial .button-light { background: var(--olive-100); border-color: var(--olive-100); color: var(--overlay); }
+
+.editorial .gallery-section { background: var(--cream); }
+.editorial .gallery-item { border-radius: 0; }
+.editorial .gallery-item img { filter: saturate(.82); }
+.editorial .gallery-link { margin-top: 30px; }
+.editorial .reviews { background: var(--warm-white); }
+.editorial .rating strong { font-size: 47px; }
+.editorial .rating > span { color: var(--logo-green); }
+.editorial .review-card { padding: 27px 24px; background: transparent; border: 0; border-top: 2px solid var(--logo-green); }
+.editorial .review-card h3 { font-size: 30px; line-height: 1; }
+.editorial .review-stars { color: var(--logo-green); }
+
+.editorial .contact { background: var(--logo-green); color: var(--white); }
+.editorial .contact .eyebrow { color: var(--olive-100); }
+.editorial .contact h2 { color: var(--white); }
+.editorial .contact .section-heading > p { color: var(--white); }
+.editorial .detail-row { border-top-color: var(--olive-100); }
+.editorial .detail-row > span { color: var(--olive-100); }
+.editorial .detail-row p { color: var(--white); font-size: 25px; }
+.editorial .detail-row small { color: var(--olive-100); }
+.editorial .map-wrap { border-color: var(--olive-100); }
+.editorial .map-wrap > a { border-color: var(--olive-100); }
+.editorial .contact-form { border: 0; padding: 30px; background: var(--cream); box-shadow: none; }
+.editorial .contact-form .eyebrow { color: var(--logo-green); }
+.editorial .contact-form h3 { font-size: 40px; line-height: 1; font-weight: 600; }
+.editorial .contact-form label { letter-spacing: .08em; text-transform: uppercase; }
+.editorial .contact-form input, .editorial .contact-form select, .editorial .contact-form textarea { border-radius: 0; }
+.editorial .contact-form .button { background: var(--logo-green); border-color: var(--logo-green); color: var(--white); }
+.editorial .contact-form .button:hover { background: var(--olive-700); }
+.editorial .footer { background: var(--overlay); }
+.editorial .footer-main { border-top: 1px solid var(--logo-green); }
+.editorial .footer-main > div:first-child p { font-size: 25px; }
+.editorial .whatsapp-float { border: 1px solid var(--olive-100); background: var(--logo-green); color: var(--white); }
+.editorial .whatsapp-float:hover { background: var(--olive-700); }
+
+@media (min-width: 640px) {
+  .editorial .hero { min-height: 740px; }
+  .editorial .hero h1 { font-size: clamp(78px, 9vw, 112px); }
+  .editorial .feature { border-bottom: 0; border-right: 1px solid var(--line); padding: 30px 23px; }
+  .editorial .feature:last-child { border-right: 0; }
+}
+@media (min-width: 1024px) {
+  .editorial .section-pad { padding-block: 112px; }
+  .editorial .hero { min-height: 760px; }
+  .editorial .hero h1 { font-size: clamp(88px, 8.5vw, 122px); }
+  .editorial .hero-visual img { object-position: center 45%; }
+  .editorial .about-grid { gap: 110px; }
+  .editorial .menu-card { min-height: 290px; }
+}
+@media (max-width: 639px) {
+  .editorial .site-header .header-inner { min-height: 67px; }
+  .editorial .main-nav.is-open { top: 67px; }
+  .editorial .brand-name { font-size: 26px; }
+  .editorial .hero { min-height: 730px; padding-block: 62px; align-items: center; }
+  .editorial .hero::after { background: linear-gradient(90deg, color-mix(in srgb, var(--overlay) 94%, transparent), color-mix(in srgb, var(--overlay) 66%, transparent)); }
+  .editorial .hero h1 { font-size: clamp(60px, 16vw, 84px); }
+  .editorial .hero-lead { font-size: 14px; }
+  .editorial .hero .button-row { align-items: stretch; }
+  .editorial .hero .button, .editorial .hero .text-link { width: 100%; justify-content: space-between; }
+  .editorial .hero-meta { gap: 20px; margin-top: 29px; }
+  .editorial .hero-meta strong { font-size: 22px; }
+  .editorial .about-visual img { height: 400px; }
+  .editorial .about-sticker { width: 126px; min-height: 82px; font-size: 22px; }
+  .editorial .menu-card > div { min-height: 190px; }
+}
+@media (max-width: 359px) {
+  .editorial .hero h1 { font-size: 54px; }
+  .editorial .hero { min-height: 760px; }
+  .editorial .brand-name { font-size: 23px; }
+}
+
